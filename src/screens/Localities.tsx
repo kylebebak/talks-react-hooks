@@ -9,9 +9,10 @@ type Data = ListData<Locality>
 
 // open -n -a /Applications/Google\ Chrome.app --args --user-data-dir="/tmp/chrome_dev_session" --disable-web-security
 
-const Localities = (props: {}) => {
+function Localities(props: {}) {
   const [data, setData] = useState<Data>({ next: null, previous: null, results: [] })
   const [next, setNext] = useState('https://api.brigada.mx/api/localities/?page_size=20')
+  const [val, setVal] = useState(false)
 
   const getNextPage = useCallback(async () => {
     const res = await request<Data>(next)
@@ -40,7 +41,7 @@ const Localities = (props: {}) => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  })
+  }, [handleScroll])
 
   useEffect(() => {
     getNextPage()
@@ -49,6 +50,7 @@ const Localities = (props: {}) => {
   return (
     <div>
       <Link to="/other">Other Page</Link>
+      <div onClick={() => setVal(!val)}>{val ? 'true' : 'false'}</div>
       {data.results.map(loc => (
         <LocalityCard key={loc.id} locality={loc} />
       ))}
