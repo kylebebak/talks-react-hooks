@@ -12,7 +12,6 @@ type Data = ListData<Locality>
 function Localities(props: {}) {
   const [data, setData] = useState<Data>({ next: null, previous: null, results: [] })
   const [next, setNext] = useState('https://api.brigada.mx/api/localities/?page_size=20')
-  const [val, setVal] = useState(false)
 
   const getNextPage = useCallback(async () => {
     const res = await request<Data>(next)
@@ -46,6 +45,8 @@ function Localities(props: {}) {
   useEffect(() => {
     getNextPage()
   }, [])
+
+  const [val, setVal] = useState(false)
 
   return (
     <div>

@@ -31,3 +31,15 @@ url: https://github.com/kylebebak
 pic: https://dronfelipe.com/images/img/face.png
 bio: Ciclista kamikaze
 ```
+
+### We're Hiring
+
+I work at Elementary Robotics as lead web architect. <>.
+
+Our team has worked / studied at places like NASA, Stanford, Qualcomm, Caltech, etc. We have a very strong engineering culture, with electrical, mechanical, firmware, hardware, machine learning, computer vision, and web engineering all in-house.
+
+<>
+
+Elementary is based in Los Angeles, but the web team (both front and backend) is based on Mexico City, and we're now hiring front and backend web engineers at our Mexico City office... If this sounds interesting, check out our job postings and apply!
+
+<https://www.elementaryrobotics.com/careers>
